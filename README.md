@@ -4,8 +4,8 @@
    Créer une application basée sur une architecture micro-service qui permet de gérer les factures contenant des produits et appartenant à un client.
  ### Travail a faire ###
 
-        1.Créer le micro-service customer-service qui permet de gérer les client
-        2.Créer le micro-service inventory-service qui permet de gérer les produits
+        1. Créer le micro-service customer-service qui permet de gérer les client
+        2. Créer le micro-service inventory-service qui permet de gérer les produits
         3. Créer la Gateway Spring cloud Gateway avec une Configuration statique du système de routage
         4. Créer l'annuaire Eureka Discrovery Service
         5. Faire une configuration dynamique des routes de la gateway
@@ -26,7 +26,11 @@
 ------------------------------------------------------------------------------------------------
 
 ### 1.Créer le micro-service customer-service qui permet de gérer les client
+![1]![customer](https://user-images.githubusercontent.com/86418817/219878495-55d9a1b7-a57c-4670-86a0-84ebea365a7c.png)
+
 ### 2.Créer le micro-service inventory-service qui permet de gérer les produits
+![2]![inventory](https://user-images.githubusercontent.com/86418817/219878507-e1104416-244f-4510-a6c4-91ce8b3f9fcf.png)
+
 ### 3. Créer la Gateway Spring cloud Gateway avec une Configuration statique du système de routage
 ![3,1](https://user-images.githubusercontent.com/63524598/209027215-3dfce026-6abb-4621-920e-66425d8c2798.PNG)
 
