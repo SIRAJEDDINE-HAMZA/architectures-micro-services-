@@ -26,26 +26,20 @@
 ------------------------------------------------------------------------------------------------
 
 ### 1.Créer le micro-service customer-service qui permet de gérer les client
-![1](https://user-images.githubusercontent.com/63524598/209022378-8f2c7fd0-2373-46b8-89e7-ab1a4c3b3eea.PNG)
-
 ### 2.Créer le micro-service inventory-service qui permet de gérer les produits
-![2](https://user-images.githubusercontent.com/63524598/209022431-5ab3ede5-eaf5-4c34-92ec-9e5cf64fa18d.PNG)
-
 ### 3. Créer la Gateway Spring cloud Gateway avec une Configuration statique du système de routage
-![3](https://user-images.githubusercontent.com/63524598/209027071-b2f50f49-8cd5-42cc-8152-dab1ae5edcf3.PNG)
-
 ![3,1](https://user-images.githubusercontent.com/63524598/209027215-3dfce026-6abb-4621-920e-66425d8c2798.PNG)
 
 ### 4. Créer l'annuaire Eureka Discrovery Service
-![4](https://user-images.githubusercontent.com/63524598/209027247-18977234-f5b1-4da1-8c36-383c8f307394.PNG)
+![4](https://user-images.githubusercontent.com/86418817/209120950-23069a4a-8163-4844-9247-9b79373e9606.png)
 
 ### 5. Faire une configuration dynamique des routes de la gateway
 
    ### 5-1 Customers 
-![5,1](https://user-images.githubusercontent.com/63524598/209027375-299721e9-fa4d-42fe-b04f-a011f1f564e3.PNG)
+![5,1](https://user-images.githubusercontent.com/86418817/209121508-002b484b-be48-4de1-92d2-1ec32a37c1a9.png)
 
    ### 5-2 Produits
-![5;2](https://user-images.githubusercontent.com/63524598/209027466-d7107ed2-2277-491e-8fba-577edf4b038d.PNG)
+![5;2](https://user-images.githubusercontent.com/86418817/209121870-f47295d6-60b7-4949-8aa9-b0b4738c5ae2.png)
 
    ### 5-3 Produits par ID
    ![5,4](https://user-images.githubusercontent.com/63524598/209027571-10fb1035-0800-4551-ae1c-00625b672257.PNG)
