@@ -6,7 +6,7 @@ import org.sid.billingservice.feign.ProductItemRestClient;
 import org.sid.billingservice.model.Customer;
 import org.sid.billingservice.model.Product;
 import org.sid.billingservice.repository.BillRepository;
-import org.sid.billingservice.repository.ProductItemRepository;
+import org.sid.billingservice.repository.ProductItemRepsitory;
 import org.springframework.hateoas.PagedModel;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,28 +14,29 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BillingRestController {
-    private BillRepository billRepository;
-    private ProductItemRepository productItemRepository;
-    private CustomerRestClient customerRestClient;
-    private ProductItemRestClient productItemRestClient;
+   private BillRepository billRepository;
+   private ProductItemRepsitory productItemRepsitory;
+   private CustomerRestClient customerRestClient;
+   private ProductItemRestClient productItemRestClient;
 
-    public BillingRestController(BillRepository billRepository, ProductItemRepository productItemRepository, CustomerRestClient customerRestClient, ProductItemRestClient productItemRestClient) {
+    public BillingRestController(BillRepository billRepository, ProductItemRepsitory productItemRepsitory, CustomerRestClient customerRestClient, ProductItemRestClient productItemRestClient) {
         this.billRepository = billRepository;
-        this.productItemRepository = productItemRepository;
+        this.productItemRepsitory = productItemRepsitory;
         this.customerRestClient = customerRestClient;
         this.productItemRestClient = productItemRestClient;
     }
-
-    @GetMapping(path = "/fullBill/{id}")
-    public Bill getBill(@PathVariable(name = "id") Long id){
-        Bill bill=billRepository.findById(id).get();
-        Customer customer=customerRestClient.getCustomerById(bill.getCustomerID());
-        bill.setCustomer(customer);
-        bill.getProductItems().forEach(pi->{
-            Product product=productItemRestClient.getProductById(pi.getProductID());
-            //pi.setProduct(product);
-            pi.setProductName(product.getName());
-        });
-        return bill;
+/*Recuperer la facture a partir de la base de donnee*/
+    @GetMapping(path ="/fullBill/{id}" )
+    public Bill getBill(@PathVariable (name = "id" )Long id ) {
+    Bill bill=billRepository.findById(id).get();
+    Customer customer=customerRestClient.getCustomerById(bill.getCustomerID());
+    bill.setCustomer(customer);
+       bill.getProductItems().forEach(pi->{
+           Product product=productItemRestClient.getProductById(pi.getProductID());
+           ///pi.setProduct(product);
+pi.setProductName(product.getName());
+               }
+               );
+        return  bill;
     }
 }
